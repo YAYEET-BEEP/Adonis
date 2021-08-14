@@ -1820,7 +1820,7 @@ return function(Vargs, env)
 			Description = "Opens the server information window";
 			Hidden = false;
 			Fun = false;
-			AdminLevel = "Moderators";
+			AdminLevel = "Players";
 			Function = function(plr,args)
 				local adminDictionary = {}
 				for i,v in pairs(service.GetPlayers()) do
@@ -1865,7 +1865,6 @@ return function(Vargs, env)
 					PrivateServerOwnerId = game.PrivateServerOwnerId;
 					ServerStartTime = service.FormatTime(server.ServerStartTime);
 					ServerAge = service.FormatTime(os.time()-server.ServerStartTime);
-					HttpEnabled = HTTP.CheckHttp();
 					ServerInternetInfo = serverInfo;
 					LoadstringEnabled = HTTP.LoadstringEnabled;
 					Admins = adminDictionary;
